@@ -6,15 +6,15 @@ const { host } = site;
 
 function determineFileExtensionFromContentType (contentType) {
   switch (contentType) {
-    case 'image/jpeg':
+    case 'audio/jpeg':
     case 'image/jpg':
       return 'jpeg';
     case 'image/png':
       return 'png';
-    case 'image/gif':
-      return 'gif';
-    case 'video/mp4':
-      return 'mp4';
+    case 'audio/mp3':
+      return 'mp3';
+    case 'audio/wav':
+      return 'wav';
     default:
       logger.debug('setting unknown file type as file extension jpeg');
       return 'jpeg';
@@ -28,10 +28,10 @@ function determineContentTypeFromFileExtension (fileExtension) {
       return 'image/jpeg';
     case 'png':
       return 'image/png';
-    case 'gif':
-      return 'image/gif';
-    case 'mp4':
-      return 'video/mp4';
+    case 'mp3':
+      return 'audio/mp3';
+    case 'wav':
+      return 'vaudio/wav';
     default:
       logger.debug('setting unknown file type as type image/jpeg');
       return 'image/jpeg';
