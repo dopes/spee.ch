@@ -4,7 +4,7 @@ module.exports = {
   serveFile ({ filePath, fileType }, claimId, name, res) {
     logger.verbose(`serving file: ${filePath}`);
     // set response options
-    const headerContentType = fileType || 'image/jpeg';
+    const headerContentType = fileType || 'audio/mp3';
     const options = {
       headers: {
         'X-Content-Type-Options': 'nosniff',
