@@ -38,18 +38,10 @@ module.exports = {
     }
     // check file type and size
     switch (file.type) {
-      case 'image/jpeg':
-      case 'image/jpg':
-      case 'image/png':
-        if (file.size > 10000000) {
-          logger.debug('publish > file validation > .jpeg/.jpg/.png was too big');
-          throw new Error('Sorry, images are limited to 10 megabytes.');
-        }
-        break;
-      case 'image/gif':
+      case 'audio/mp3':
         if (file.size > 50000000) {
-          logger.debug('publish > file validation > .gif was too big');
-          throw new Error('Sorry, .gifs are limited to 50 megabytes.');
+          logger.debug('publish > file validation > .mp3 was too big');
+          throw new Error('Sorry, .mp3s are limited to 50 megabytes.');
         }
         break;
       case 'video/mp4':
